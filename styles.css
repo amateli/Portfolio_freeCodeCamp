@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Raleway:wght@300;400;500;600;700;900&display=swap');
+
+:root {
+  --pop: 'Poppins' , sans-serif;
+  --rale: 'Raleway' , sans-serif;
+  --rust-effect: #be3144;
+  --snowflake: #f0f0f0;
+  --sailor: #45567d;
+  --prestige-blue: #303841;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* font-size: 100%; */
+}
+
+body {
+  font-family: var(--pop);
+  color: var(--snowflake);
+  margin: 0;
+  line-height: 1.4;
+}
+
+#navbar,
+.nav-link,
+#navbar a{
+  display: flex;  
+}
+
+#navbar {
+  position: fixed;
+  background-color: var(--rust-effect);
+  width: 100%;
+  top: 0;
+  justify-content: end;
+  padding: 0 2em;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.5);
+  align-items: center;
+}
+
+input[type="checkbox"],
+.menu {
+  display: none;
+}
+
+.menu {
+  font-size: 2em;
+  user-select: none;
+  padding: 0.625em;
+  position: relative;
+  z-index: 10;
+}
+
+nav ul {
+  position: relative;
+  margin: 0;
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+.nav-link {
+  align-items: center;
+}
+
+a {
+  color: var(--snowflake);
+  text-decoration: none;
+}
+
+#navbar a {
+  padding: 0.91em;
+  font-size: 1.375em;
+}
+
+#navbar a:hover {
+  background-color: var(--sailor);
+}
+
+section {
+  min-height: 100vh;
+}
+
+#welcome-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  background:linear-gradient(62deg, #3a3d40 0%, #181719 100%);;
+}
+
+h1 {
+  font-family: var(--rale);
+  font-size: 3.75em;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  font-style: italic;
+  font-weight: 200;
+}
+
+#welcome-section p {
+  color: var(--rust-effect);
+  font-size: 1.875em;
+}
+
+#project {
+  background-color: var(--sailor);
+  padding: 6.25em 1.25em;
+}
+
+#project h1 {
+  margin: 0 auto 60px;
+  max-width: 640px;
+  text-align: center;
+  border-bottom: 2px solid var(--snowflake);
+  font-size: 2.625em;
+}
+
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  margin-bottom: 3em;
+}
+
+.project-item {
+  width: 25em;
+  height: 25em;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+  border-radius:  0 0 2px 2px;
+}
+
+.project-pic{
+  width: 100%;
+  min-width: 10em;
+  height: 80%;
+  background-position: 50%;
+}
+
+.one {
+  background-image: url(https://raw.githubusercontent.com/amateli/interactive-rating-component/main/design/desktop-design.jpg);
+  background-size:200%;
+}
+
+.two {
+  background-image: url(https://lh3.googleusercontent.com/pw/AL9nZEU2zpAPFbRCvldsphwf1MW39qcXjphN9FIPRGw4MdNeY6Blq3o54RE_ZRuAgI9xdZDGCo9bfQneqaZQyfq8o9YYJN8NhIciLddK-INkOlzit9l2uhXsR6OZSdElOAqwfkldSQFhduWiL-dKaC9Kkx85ji0gdmaCm7r1qbWZmjcO04-Se6hpnepXyA2ujkavK9jPCcjZDLjcTLOwoDXVq-Q3PbbuOszWV6XeMwhquOwEDtIwIJJidA8wbuwsWG3NGAW3U0YTos-GtFyls8opY2GWPUzEeeAj9hDHdPrEHLjQwbyZB352BX_8YA0K9eZL5JAQRCYKLUgDrjmZod_PVkA_2YzovLVTHJT-VV-ToafrzOBvkeK_9my5B_X3_n7P6VzcfsM7Hx9eNWVqSLB9iGlP-WjwlgvaBN4-yobkkXamr1TRzLtvW63TrEpvXkxwUxRm0CtarCNS7o1wCUo0ZG4uUAo4S20eiIjp6A-tPtYYmBEzqxOWTFcZ7mOmnbEN7qJpJayA0C2ajCXdU-l_Z5nqz5PwV0hxawuWYWYCCICTUHCV0c4DQQHkiJUx5SePkdA-IIFhREaQ6HODkHEhjhr-hYOAfCqz8XdtT5ksY6hiTLbiJaX68RNPFgaAOIRxdhC25ShM-7hVWOU74faTTmknAADZ82qg9GAptKZr4uwY2Ud1-AcWe8kBC2kz2TSo3ik_s8wvJNLUEIOXilI2wQzwh8QHAWBu8Krucer6i83RQiKxh-XbkCErUkdL8S2pGDmwUPDPXw1q5O4gDDODT4N-lsAarPpGs4qhCAJkc7HVoUalUm2gl3-VOBI3tZIPpdnPPvg2Q5OvdVy8YQa80wuMKaGBulJe7YfjBxjSxxhV2NJ1g9kk5PYWq-gx3u9UWkEJn9VQBlRLSaGRYirLlA=w1350-h658-no?authuser=0);
+  background-size: cover;
+}  
+
+.three {
+  background-image: url(https://raw.githubusercontent.com/amateli/product-preview-card-component/main/Screenshot%202022-07-26%20012203.png);
+  background-size: 200%;
+}
+
+.four {
+  background-image: url(https://raw.githubusercontent.com/amateli/qr-code-component/main/design/desktop-design.jpg);
+  background-size: 200%;
+}
+
+.five {
+  background-image: url(https://lh3.googleusercontent.com/pw/AL9nZEXx2LgRIOy1O5XjKEkZhZ7jkN3OzNMy2uZr3Brvh5j2r-0Q7mFtXYENxK-4EwWeQQtMnh9Wt6WXNtL0lI7F6brdPE4HYowbyP_rujncIETDRmJX5F1bQGc69EgcT_KIhVf68M4VQ0cRwWlH6hZQ7B5olO-S8cChgr6ffPAJJ8J1OUmFy7T7smfyxAr0MyAn-WHdT6EGYC0kwsBsGNvZlaJ4QcQ3KjvFuDruclXDhNgU4XVgl2wrQauGAcW2BSXXvGbUvzlN6sRqEKSmpeuoS2dc1i1UHqRdXvY14mvu7LjuFD9jiaz0NIVYHeCvkk7mnc03uVW2XssJQ-vf9U_EhjMnIuZH4gWtkuXWRhIdpw-Gf3N02AAfuumfU_Kqk_Pskk6MMcSH7SJYV6738eOsaWYAgSrl4vuBnQg20nWosAPNnQ6ZSrqlmPtCly6y17CCVYmT2tpCZZ7noF_VFvDA9PSshyuMbml6UWLZF6TqLqCMIBrfbLvCY4geaC38VadSiNUQMHHiHb-cIRKaEJ_vRZb4m7OEH0DGYNGIdk3VppPKvoG3bizL89I4GVOw4Kz8dGHkrj3uyrKvVjdDO4Y3HP_hLA3vpiA-jLLQa6AreZuE3_5tVHI8cjXnpardFW_Wk9eQ2GT8K2YmLL67bVe-qYgHJa0Cm74BS5J9UITOIeizgJpXuT3VbfCvALNIuxhVzaqxCfCcc5BHhWUx9nOfTnXq-IYcOTpnemsSm2QbrHueC4GDIywf4HzSSITqXEuCD-rqFggKAhht3PjnJngfR-5Snql4RbVWo5ubnAMM3KP9Bd08Rc5M6IUXDgktW1cYGVSe7GMb2_z9TvLQIT1RRz_xek0QHQU90Yk54JU0rG2H3Mo2cZpv2gGE_WWkD839Qebvk-oOdh-nD2_5uasBBQ=w382-h185-no?authuser=0);
+  background-size: 120%;
+  background-position: 10% 90%;
+}
+
+.six {
+  background-image: url(https://lh3.googleusercontent.com/pw/AL9nZEU3NoSo_-gQYufbV3qheGinf3zz7KuoDLS7Yh35viKtbkRInJ5lsy2LD89jhf84_GBD3KtwF9dwTH6TfuwVpbGb2aE8eOZoxyORM8gP2g3mFNFbRlvwNvVWnPHTu5CFYDHftbFBJWBNaan-0ojz0u1YL3sc7s1siSScpOXMEQpoAGpOflzzXHUvRYbGkT_zY9SZdXgRFn1qfvRfE-9qmyYQI3CXcYyAbSjOSU83XWsqvW7aSxuKf1zimpUwA3R7YHSdWB-lpMgrPlvrsWQRBQNBSpJQgRb4g5XB4L32w5Cf6kTKz9vfHXI8xIGGyiAbzEzYlxArvhey4-fPe8_ePbFV-5ZUCaJT8PpuA261slO-dDXcihX4cNST5UzNSG6zhzosZ-ctq14UTYXio5_vzZI12lcJf4tkQnXD4HwTiKRIah1nO8ccU0R93nFGvdHwTTSSDpUDb37-yD0qIIMhPEcHVB4m3v5njfSxANKYvpATH4hex3SNihg2L0pH_NVjWSlpBWSiBnCmbQmkXUxVeZeYHRK1PoVanUYmHrwLipmP7cqF1VzD1FSk-n2r2d_FFagMW4Z5N_sLs1oaWiQ7EKB0zRY7tzhfvi1VQOxRM6ckN4xOsJ3839gFLUONLYHXiinbYyNbTdV1F5LfLMjgp6aOoM7GmQ1DQ0WJG6Oo9q-f4udjWbEiCE_wnulhhLtn49Vr0D802btuw2xR3ir4WHlCaxR7O0Gwx7YISg0LBC0550asCxqei8_WN-uoWav21MSwDCm7EcUNfZkD2EIlQelbTkF546vNlYI29uUiB8x7oTMa1kiUAir9oRcWxXsHTqBAa7d8HoEcBP8Ntshdj0zs_zTRrl9lhLJa8McxTDTgtTUOozC06k7Mh6Sr4oT35qG8CEiuPU95yMv48-5evg=w1187-h607-no?authuser=0);
+}
+
+#project p {
+  margin: 0;
+  height: 20%;
+  padding: 20px 5px;
+  font-size: 1.25em;
+  font-style: normal;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--prestige-blue);
+  border-bottom-right-radius: inherit;
+  border-bottom-left-radius: inherit;
+}
+
+.code {
+  font-size: 1em;
+  color: orangered;
+  visibility: hidden;
+  transition:color .4s ease-in-out;
+}
+
+#project p:hover .code {
+  visibility:visible;
+}
+
+.left {
+  margin-right: 5px;
+}
+
+.right {
+  margin-left: 5px;
+}
+
+.more-projects {
+  max-width: 10em;
+  margin:  0 auto;
+  font-family: var(--pop);
+  font-size: 1.25em;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--snowflake);
+  border: inherit;
+  border-radius: 2px;
+  transition: background-color 0.3s ease-out;
+  background-color: var(--prestige-blue);
+}
+
+.more-projects:hover {
+  background-color: var(--rust-effect);
+}
+
+.more-projects svg {
+  width: 1.5em;
+  margin-left: 4px;
+  transition: 0.3s ease-out;
+  fill: var(--snowflake);
+}
+
+.more-projects svg:hover {
+  transform: translateX(2px);
+}
+
+#contact {
+  background-color: var(--prestige-blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  text-align: center;
+}
+
+#contact p{
+  font-size: 1.125em;
+}
+
+.contact-links {
+  width: 90%;
+  margin-top: 3em;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact-links a{
+  padding: 10px 20px;
+  align-items: center;
+  text-shadow: 2px 2px 1px #1f1f1f;;
+  transition: transform 0.3s ease-out;
+  font-size: 1.5em;
+}
+
+.contact-links a:hover {
+  transform: translateY(8px);
+}
+
+.contact-links i {
+  margin-right: 7px;
+}
+
+footer {
+  background-color: var(--prestige-blue);
+  height: 20vh;
+  padding: 1.25em;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  border-top: 4px solid var(--rust-effect);
+}
+
+footer p {
+  font-style: normal;
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+@media screen and (max-width:1024px){
+  html {
+    font-size: 80%;
+  }
+}
+
+@media screen and (max-width:768px){
+  html {
+    font-size: 70%;
+  }
+}
+
+@media screen and (max-width:500px) {
+  .menu {
+    display: block;
+  }
+  .nav-link {
+    display: none;
+    position: absolute;
+    right: -2em;
+    width: 100vw;
+    text-align: center;
+  }
+  .nav-link li {
+    display: inline-block;
+    width: 100%;
+    background-color: var(--rust-effect);
+  }
+  input[type=checkbox]:checked ~ .nav-link {
+    display: block;
+  }
+  nav a{
+    justify-content: center;
+  }
+}
