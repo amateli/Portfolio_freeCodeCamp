@@ -15,7 +15,6 @@
 
 html {
   scroll-behavior: smooth;
-  /* font-size: 100%; */
 }
 
 body {
@@ -191,14 +190,16 @@ p {
 }
 
 .code {
-  font-size: 1em;
+  font-size: 2em;
   color: orangered;
-  visibility: hidden;
-  transition:color .4s ease-in-out;
+  display: block;
+  transform: scaleY(0%);
+  font-weight: 700;
+  transition:all 0.4s ease;
 }
 
 #project p:hover .code {
-  visibility:visible;
+  transform: scaleY(100%);
 }
 
 .left {
@@ -221,7 +222,7 @@ p {
   color: var(--snowflake);
   border: inherit;
   border-radius: 2px;
-  transition: background-color 0.3s ease-out;
+  transition: all 0.4s ease-out;
   background-color: var(--prestige-blue);
 }
 
@@ -232,11 +233,11 @@ p {
 .more-projects svg {
   width: 1.5em;
   margin-left: 4px;
-  transition: 0.3s ease-out;
+  transition: 0.4s ease-out;
   fill: var(--snowflake);
 }
 
-.more-projects svg:hover {
+.more-projects:hover svg {
   transform: translateX(2px);
 }
 
@@ -309,21 +310,24 @@ footer p {
 @media screen and (max-width:500px) {
   .menu {
     display: block;
+    cursor: pointer;
   }
   .nav-link {
-    display: none;
-    position: absolute;
-    right: -2em;
+    display: block;
+    position: fixed;
+    inset: 0;
+    top:8vh;
     width: 100vw;
     text-align: center;
+    transform: translateX(100%);
+    transition: all 0.4s ease;
   }
   .nav-link li {
-    display: inline-block;
-    width: 100%;
     background-color: var(--rust-effect);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.5);   
   }
   input[type=checkbox]:checked ~ .nav-link {
-    display: block;
+    transform: translateX(0%);
   }
   nav a{
     justify-content: center;
